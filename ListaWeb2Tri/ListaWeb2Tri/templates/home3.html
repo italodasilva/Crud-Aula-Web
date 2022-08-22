@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+
+</head>
+<body style ="background-color: #181818; font-family: 'Ubuntu', sans-serif; text-align: center;">
+    <h1 style ="color: #fdfdfd; margin-top: 15px;">Sistema de cadastro de Corretores, Municípios e Regiões</h1>
+
+    <a href="{% url 'corretor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px; border: none; font-size: 36px; padding: 15px;">Corretores</a>
+    <br>
+    <a href="{% url 'telefonecorretor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px;  border: none; font-size: 36px; padding: 15px;">Telefones dos Corretores</a>
+    <br>
+    <a href="{% url 'corgercor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px;  border: none; font-size: 36px; padding: 15px;">Corretor Gerencia um Corretor</a>
+    <br>
+    <a href="{% url 'municipio' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px; border: none; font-size: 36px; padding: 15px;">Municípios</a>
+    <br>
+    <a href="{% url 'regiao' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px; border: none; font-size: 36px; padding: 15px;">Regiões</a>
+    <br>
+    <a href="{% url 'coratendereg' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: #ff0000; width: 540px; border: none; font-size: 36px; padding: 15px;">Corretor Atende Região</a>
+    <br>
+    <a href="{% url 'index' %}" class="btn btn-success" style="margin-top: 25px; margin-bottom: 10px; background-color: #6700ab; width: 540px; border: none; font-size: 36px; padding: 15px;">Voltar a home</a>
+</body>
+{% endblock %}
