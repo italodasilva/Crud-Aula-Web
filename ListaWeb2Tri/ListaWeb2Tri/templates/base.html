@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italo Services</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="imagem">
+        <img src="{% static 'images/Imagem1.png'%}" alt="image" height="350px">
+    </div>
+    <div class="container">
+        {% block conteudo %}
+        
+        {% endblock %}
+    </div>   
+</body>
+</html>
