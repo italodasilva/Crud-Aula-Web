@@ -11,6 +11,3 @@ def home2(request):
 
 def home3(request):
     return render(request, 'home3.html', {})
-
-def home4(request):
-    return render(request, 'home4.html', {})

@@ -24,7 +24,6 @@ urlpatterns = [
     path('home1', paginas.home1, name='home1'),
     path('home2', paginas.home2, name='home2'),
     path('home3', paginas.home3, name='home3'),
-    path('home4', paginas.home4, name='home4'),
 
     path('departamento', Departamento.listar, name='departamento'),
     path('departamento/criar', Departamento.criar, name='departamento.criar'),
