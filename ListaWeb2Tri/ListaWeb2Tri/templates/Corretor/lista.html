@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+
+    </head>
+    <body style ="background-color: gray; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">
+
+    <p>
+        <a href="{% url 'corretor.criar' %}" class="btn btn-success" style="margin-top: 5px; margin-bottom: 5px;background-color: black; width: 250px; padding: 10px; border: none; font-size: 20px;"><i class="fa-solid fa-plus"></i> Cadastrar corretor</a>
+    </p>
+
+    <table class="table table-hover table-sm" style = "background-color: #fdfdfd; border:#002257;" >
+        <tr>
+            <th>CPF</th>
+            <th>Comissão</th>
+            <th>Nome</th>
+            <th style="width:1px;white-space: nowrap;">Ações</th>
+        </tr>
+
+        {% for c in corretor %}
+            <tr>
+                <td>{{ c.cpf }}</td>
+                <td>{{ c.comissao }}</td>
+                <td>{{ c.nome }}</td>
+                <td style="width:1px;white-space: nowrap;">
+                    <a href="{% url 'corretor.editar' c.cpf %}" class="btn btn-sm btn-warning" title="Editar categoria"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+
+                    <a href="{% url 'corretor.excluir' c.cpf %}" class="btn btn-sm btn-danger" title="Excluir" style="color: black;"><i class="fa-solid fa-trash-can"></i> Excluir</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <p>
+        <a href="{% url 'home3' %}" class="btn btn-success" style="margin-top: 5px; margin-bottom: 5px;background-color: #ff0000; width: 250px; padding: 10px; border: none;"><i class="fa-solid fa-backward-step"></i> VOLTAR</a>
+    </p>
+
+    </body>
+{% endblock %}
