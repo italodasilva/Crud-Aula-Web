@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+
+</head>
+<body style ="background-color: gray; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">
+
+    <a href="{% url 'corretor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px; border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-user"></i> CORRETORES</a>
+    <br>
+    <a href="{% url 'telefonecorretor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px;  border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-phone"></i> CONTATO DOS CORRETORES</a>
+    <br>
+    <a href="{% url 'corgercor' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px;  border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-crown"></i> GERENTES</a>
+    <br>
+    <a href="{% url 'municipio' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px; border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-city"></i> CIDADES</a>
+    <br>
+    <a href="{% url 'regiao' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px; border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-mountain"></i> REGIÕES</a>
+    <br>
+    <a href="{% url 'coratendereg' %}" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px; background-color: black; width: 540px; border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-location-dot"></i> LOCAL DE SERVIÇO</a>
+    <br>
+    <a href="{% url 'index' %}" class="btn btn-success" style="margin-top: 25px; margin-bottom: 10px; background-color: white; color: black; width: 540px; border: none; font-size: 28px; padding: 10px;"><i class="fa-solid fa-backward"></i> VOLTAR AO INICIO</a>
+</body>
+{% endblock %}
